@@ -13,6 +13,8 @@
 		78907AF721C3728A00A7B218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78907AF621C3728A00A7B218 /* Assets.xcassets */; };
 		78907AFA21C3728A00A7B218 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78907AF821C3728A00A7B218 /* LaunchScreen.storyboard */; };
 		78907AFD21C3728A00A7B218 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78907AFC21C3728A00A7B218 /* main.m */; };
+		78907B0D21C3920600A7B218 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78907B0C21C3920600A7B218 /* MyView.m */; };
+		78907B1321C395AC00A7B218 /* XtayTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 78907B1221C395AC00A7B218 /* XtayTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		78907AF921C3728A00A7B218 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78907AFB21C3728A00A7B218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78907AFC21C3728A00A7B218 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		78907B0B21C3920600A7B218 /* MyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		78907B0C21C3920600A7B218 /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		78907B1121C395AC00A7B218 /* XtayTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XtayTextField.h; sourceTree = "<group>"; };
+		78907B1221C395AC00A7B218 /* XtayTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XtayTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		78907AEC21C3728900A7B218 /* ZJJTextFieldHandle */ = {
 			isa = PBXGroup;
 			children = (
+				78907B1421C3B6FC00A7B218 /* View */,
 				78907AED21C3728900A7B218 /* AppDelegate.h */,
 				78907AEE21C3728900A7B218 /* AppDelegate.m */,
 				78907AF021C3728900A7B218 /* ViewController.h */,
@@ -69,6 +76,17 @@
 				78907AFC21C3728A00A7B218 /* main.m */,
 			);
 			path = ZJJTextFieldHandle;
+			sourceTree = "<group>";
+		};
+		78907B1421C3B6FC00A7B218 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78907B0B21C3920600A7B218 /* MyView.h */,
+				78907B0C21C3920600A7B218 /* MyView.m */,
+				78907B1121C395AC00A7B218 /* XtayTextField.h */,
+				78907B1221C395AC00A7B218 /* XtayTextField.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78907B0D21C3920600A7B218 /* MyView.m in Sources */,
 				78907AF221C3728900A7B218 /* ViewController.m in Sources */,
 				78907AFD21C3728A00A7B218 /* main.m in Sources */,
+				78907B1321C395AC00A7B218 /* XtayTextField.m in Sources */,
 				78907AEF21C3728900A7B218 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,16 +303,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 33757152@qq.com (9HU753Z3YX)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N6PEU6H462;
+				DEVELOPMENT_TEAM = BH9K9RSN6M;
 				INFOPLIST_FILE = ZJJTextFieldHandle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xtayqria.ZJJTextFieldHandle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "d6460221-f013-484e-ac4d-ad09af81b66a";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,16 +324,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 33757152@qq.com (9HU753Z3YX)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N6PEU6H462;
+				DEVELOPMENT_TEAM = BH9K9RSN6M;
 				INFOPLIST_FILE = ZJJTextFieldHandle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xtayqria.ZJJTextFieldHandle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "d6460221-f013-484e-ac4d-ad09af81b66a";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

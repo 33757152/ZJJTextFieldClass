@@ -2,11 +2,12 @@
 //  ViewController.m
 //  ZJJTextFieldHandle
 //
-//  Created by YD on 2018/12/14.
-//  Copyright © 2018年 YD. All rights reserved.
+//  Created by xtayqria on 2016/09/18.
+//  Copyright © 2016年 xtayqria. All rights reserved.
 //
 
 #import "ViewController.h"
+#import "MyView.h"
 
 @interface ViewController ()
 
@@ -17,8 +18,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    MyView *view = [[MyView alloc] init];
+    view.numTF.textBlock = ^(NSString *num) {
+        NSLog(@"num=%@",num);
+    };
+    view.pwdTF.textBlock = ^(NSString *pwd) {
+        NSLog(@"pwd=%@",pwd);
+    };
+    [self.view addSubview:view];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
