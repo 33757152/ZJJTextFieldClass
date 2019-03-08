@@ -7,17 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		781354EA2231FC6100E4F99C /* XtayTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 781354E72231FC6100E4F99C /* XtayTextFieldView.m */; };
+		781354EB2231FC6100E4F99C /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 781354E82231FC6100E4F99C /* down.png */; };
+		781354EF2231FC9B00E4F99C /* GetCurrentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 781354EE2231FC9B00E4F99C /* GetCurrentVC.m */; };
+		781354F32231FDF900E4F99C /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 781354F22231FDF900E4F99C /* NextViewController.m */; };
+		781354F62231FE2B00E4F99C /* NextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 781354F52231FE2B00E4F99C /* NextTableViewCell.m */; };
 		78907AEF21C3728900A7B218 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78907AEE21C3728900A7B218 /* AppDelegate.m */; };
 		78907AF221C3728900A7B218 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78907AF121C3728900A7B218 /* ViewController.m */; };
 		78907AF521C3728900A7B218 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78907AF321C3728900A7B218 /* Main.storyboard */; };
 		78907AF721C3728A00A7B218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78907AF621C3728A00A7B218 /* Assets.xcassets */; };
 		78907AFA21C3728A00A7B218 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78907AF821C3728A00A7B218 /* LaunchScreen.storyboard */; };
 		78907AFD21C3728A00A7B218 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78907AFC21C3728A00A7B218 /* main.m */; };
-		78907B0D21C3920600A7B218 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78907B0C21C3920600A7B218 /* MyView.m */; };
-		78907B1321C395AC00A7B218 /* XtayTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 78907B1221C395AC00A7B218 /* XtayTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		781354E72231FC6100E4F99C /* XtayTextFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XtayTextFieldView.m; sourceTree = "<group>"; };
+		781354E82231FC6100E4F99C /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		781354E92231FC6100E4F99C /* XtayTextFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XtayTextFieldView.h; sourceTree = "<group>"; };
+		781354ED2231FC9B00E4F99C /* GetCurrentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetCurrentVC.h; sourceTree = "<group>"; };
+		781354EE2231FC9B00E4F99C /* GetCurrentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetCurrentVC.m; sourceTree = "<group>"; };
+		781354F12231FDF900E4F99C /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
+		781354F22231FDF900E4F99C /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
+		781354F42231FE2B00E4F99C /* NextTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextTableViewCell.h; sourceTree = "<group>"; };
+		781354F52231FE2B00E4F99C /* NextTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextTableViewCell.m; sourceTree = "<group>"; };
 		78907AEA21C3728900A7B218 /* ZJJTextFieldHandle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJJTextFieldHandle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78907AED21C3728900A7B218 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		78907AEE21C3728900A7B218 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -28,10 +40,6 @@
 		78907AF921C3728A00A7B218 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78907AFB21C3728A00A7B218 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78907AFC21C3728A00A7B218 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		78907B0B21C3920600A7B218 /* MyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
-		78907B0C21C3920600A7B218 /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
-		78907B1121C395AC00A7B218 /* XtayTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XtayTextField.h; sourceTree = "<group>"; };
-		78907B1221C395AC00A7B218 /* XtayTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XtayTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		781354EC2231FC7000E4F99C /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				781354ED2231FC9B00E4F99C /* GetCurrentVC.h */,
+				781354EE2231FC9B00E4F99C /* GetCurrentVC.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		781354F02231FDE100E4F99C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				78907AF021C3728900A7B218 /* ViewController.h */,
+				78907AF121C3728900A7B218 /* ViewController.m */,
+				781354F12231FDF900E4F99C /* NextViewController.h */,
+				781354F22231FDF900E4F99C /* NextViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		78907AE121C3728900A7B218 = {
 			isa = PBXGroup;
 			children = (
@@ -64,16 +92,17 @@
 		78907AEC21C3728900A7B218 /* ZJJTextFieldHandle */ = {
 			isa = PBXGroup;
 			children = (
+				781354F02231FDE100E4F99C /* Controller */,
+				781354EC2231FC7000E4F99C /* Tool */,
 				78907B1421C3B6FC00A7B218 /* View */,
 				78907AED21C3728900A7B218 /* AppDelegate.h */,
 				78907AEE21C3728900A7B218 /* AppDelegate.m */,
-				78907AF021C3728900A7B218 /* ViewController.h */,
-				78907AF121C3728900A7B218 /* ViewController.m */,
 				78907AF321C3728900A7B218 /* Main.storyboard */,
 				78907AF621C3728A00A7B218 /* Assets.xcassets */,
 				78907AF821C3728A00A7B218 /* LaunchScreen.storyboard */,
 				78907AFB21C3728A00A7B218 /* Info.plist */,
 				78907AFC21C3728A00A7B218 /* main.m */,
+				781354E82231FC6100E4F99C /* down.png */,
 			);
 			path = ZJJTextFieldHandle;
 			sourceTree = "<group>";
@@ -81,10 +110,10 @@
 		78907B1421C3B6FC00A7B218 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				78907B0B21C3920600A7B218 /* MyView.h */,
-				78907B0C21C3920600A7B218 /* MyView.m */,
-				78907B1121C395AC00A7B218 /* XtayTextField.h */,
-				78907B1221C395AC00A7B218 /* XtayTextField.m */,
+				781354E92231FC6100E4F99C /* XtayTextFieldView.h */,
+				781354E72231FC6100E4F99C /* XtayTextFieldView.m */,
+				781354F42231FE2B00E4F99C /* NextTableViewCell.h */,
+				781354F52231FE2B00E4F99C /* NextTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,6 +178,7 @@
 				78907AFA21C3728A00A7B218 /* LaunchScreen.storyboard in Resources */,
 				78907AF721C3728A00A7B218 /* Assets.xcassets in Resources */,
 				78907AF521C3728900A7B218 /* Main.storyboard in Resources */,
+				781354EB2231FC6100E4F99C /* down.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,11 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78907B0D21C3920600A7B218 /* MyView.m in Sources */,
+				781354EA2231FC6100E4F99C /* XtayTextFieldView.m in Sources */,
+				781354F32231FDF900E4F99C /* NextViewController.m in Sources */,
 				78907AF221C3728900A7B218 /* ViewController.m in Sources */,
 				78907AFD21C3728A00A7B218 /* main.m in Sources */,
-				78907B1321C395AC00A7B218 /* XtayTextField.m in Sources */,
 				78907AEF21C3728900A7B218 /* AppDelegate.m in Sources */,
+				781354F62231FE2B00E4F99C /* NextTableViewCell.m in Sources */,
+				781354EF2231FC9B00E4F99C /* GetCurrentVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,9 +335,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 33757152@qq.com (9HU753Z3YX)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BH9K9RSN6M;
+				CODE_SIGN_IDENTITY = "iPhone Developer: CONGBO QIU (4PV2Z2NJWK)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KU46YZSG72;
 				INFOPLIST_FILE = ZJJTextFieldHandle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,7 +347,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xtayqria.ZJJTextFieldHandle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "d6460221-f013-484e-ac4d-ad09af81b66a";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = ZJJAllProjectTestDevProfile;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -324,9 +356,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: 33757152@qq.com (9HU753Z3YX)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BH9K9RSN6M;
+				CODE_SIGN_IDENTITY = "iPhone Developer: CONGBO QIU (4PV2Z2NJWK)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KU46YZSG72;
 				INFOPLIST_FILE = ZJJTextFieldHandle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -336,7 +368,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xtayqria.ZJJTextFieldHandle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "d6460221-f013-484e-ac4d-ad09af81b66a";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = ZJJAllProjectTestDevProfile;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

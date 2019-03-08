@@ -10,12 +10,25 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^endEditingText)(NSString *);
+@protocol TextEndDelegate <NSObject>
+
+/**
+ 获取结果的代理
+
+ @param text 结果
+ */
+- (void)obtainResultText:(NSString *)text;
+
+@end
 
 @interface XtayTextFieldView : UIView
 
-@property (nonatomic, copy) endEditingText textBlock;
-@property (nonatomic, strong) UITextField *myTextField;
+@property (nonatomic, weak) id <TextEndDelegate> textDelegate;
+
+/**
+ 如果不是加到tableViewCell上面,则不用管这个属性
+ */
+@property (nonatomic, copy) NSString *freshText;
 
 /**
  如果输入框没有左视图,则不用管 image 属性

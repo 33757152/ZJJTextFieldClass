@@ -10,11 +10,13 @@
 #define   SCREEN_HEIGHT    [UIScreen mainScreen].bounds.size.height
 
 #import "XtayTextFieldView.h"
+#import "GetCurrentVC.h"
 
 @interface XtayTextFieldView () <UITextFieldDelegate>
 
 @property (nonatomic, assign) CGFloat keyBoardHeight; // 键盘高度
 @property (nonatomic, strong) UIView *currentVCView;
+@property (nonatomic, strong) UITextField *myTextField;
 
 @end
 
@@ -23,40 +25,15 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        
-        self.currentVCView = [[self obtainTopViewController] view];
-
-        NSLog(@"%@",[self obtainTopViewController]);
-        
-        
-        
-        
-        
+        self.currentVCView = [[GetCurrentVC obtainCurrentViewController] view];
         [self creatTextField];
     }
     return self;
 }
 
-- (UIViewController *)obtainTopViewController {
-    UIViewController *rootVC = [[[UIApplication sharedApplication] delegate] window].rootViewController;
-    if ([rootVC isKindOfClass:[UINavigationController class]]) {
-        UINavigationController *nav = (UINavigationController *)rootVC;
-        return nav.topViewController;
-    }
-    if ([rootVC isKindOfClass:[UIViewController class]]) {
-        return rootVC.presentedViewController;
-        
-        
-
-    }
-    
-    
-    
-    return nil;
-}
-
 - (void)creatTextField {
     self.myTextField = [[UITextField alloc] initWithFrame:self.bounds];
+    self.myTextField.borderStyle = UITextBorderStyleRoundedRect;
     self.myTextField.delegate = self;
     self.myTextField.returnKeyType = UIReturnKeyDone;
     [self addSubview:self.myTextField];
@@ -94,8 +71,8 @@
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    if (self.textBlock) {
-        self.textBlock(textField.text);
+    if ([self.textDelegate respondsToSelector:@selector(obtainResultText:)]) {
+        [self.textDelegate obtainResultText:textField.text];
     }
     [UIView animateWithDuration:0.25 animations:^{
         self.currentVCView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -107,6 +84,10 @@
         [textField resignFirstResponder];
     }
     return YES;
+}
+
+- (void)setFreshText:(NSString *)freshText {
+    self.myTextField.text = freshText;
 }
 
 #pragma mark - 输入框左视图赋值
