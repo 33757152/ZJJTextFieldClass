@@ -36,6 +36,7 @@
     self.myTextField.borderStyle = UITextBorderStyleRoundedRect;
     self.myTextField.delegate = self;
     self.myTextField.returnKeyType = UIReturnKeyDone;
+    self.myTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
     [self addSubview:self.myTextField];
     [SINGLE_NOTICE addObserver:self selector:@selector(keyBoardWillShown:) name:UIKeyboardWillShowNotification object:nil];
 }
@@ -51,9 +52,9 @@
     CGRect absoluteFrame = [self convertRect:self.currentVCView.frame toView:self.currentVCView];
     CGFloat textFieldUpHeight = self.keyBoardHeight - (SCREEN_HEIGHT - (self.frame.size.height + absoluteFrame.origin.y));
     CGFloat tfHeight = self.frame.size.height;
-    if (textFieldUpHeight > -tfHeight) {
+    if (textFieldUpHeight > -tfHeight && textFieldUpHeight > 0) {
         [UIView animateWithDuration:0.25 animations:^{
-            self.currentVCView.frame = CGRectMake(0, -textFieldUpHeight-tfHeight, SCREEN_WIDTH, SCREEN_HEIGHT);
+            self.currentVCView.frame = CGRectMake(0, -textFieldUpHeight-tfHeight, self.currentVCView.frame.size.width, self.currentVCView.frame.size.height);
         }];
     }
 }
@@ -71,11 +72,11 @@
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    if ([self.textDelegate respondsToSelector:@selector(obtainResultText:)]) {
-        [self.textDelegate obtainResultText:textField.text];
+    if ([self.textDelegate respondsToSelector:@selector(obtainResultText: cellView:)]) {
+        [self.textDelegate obtainResultText:textField.text cellView:self];
     }
     [UIView animateWithDuration:0.25 animations:^{
-        self.currentVCView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+         self.currentVCView.frame = CGRectMake(0, SCREEN_HEIGHT-self.currentVCView.frame.size.height, self.currentVCView.frame.size.width, self.currentVCView.frame.size.height);
     }];
 }
 

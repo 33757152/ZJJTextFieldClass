@@ -6,6 +6,8 @@
 //  Copyright © 2019年 YD. All rights reserved.
 //
 
+@class XtayTextFieldView;
+
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -14,10 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  获取结果的代理
-
+ 
  @param text 结果
  */
-- (void)obtainResultText:(NSString *)text;
+- (void)obtainResultText:(NSString *)text cellView:(XtayTextFieldView *)cellView;
 
 @end
 
@@ -26,12 +28,22 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id <TextEndDelegate> textDelegate;
 
 /**
- 如果不是加到tableViewCell上面,则不用管这个属性
+ 重新给textField赋值
  */
 @property (nonatomic, copy) NSString *freshText;
 
 /**
- 如果输入框没有左视图,则不用管 image 属性
+ 字体居中方式
+ */
+@property (nonatomic, assign) NSTextAlignment textAlignment;
+
+/**
+ 水印提示
+ */
+@property (nonatomic, copy) NSString *placeholder;
+
+/**
+ textField 的左视图
  */
 @property (nonatomic, strong) UIImage *image;
 
