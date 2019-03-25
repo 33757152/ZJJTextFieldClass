@@ -87,10 +87,6 @@
     return YES;
 }
 
-- (void)setFreshText:(NSString *)freshText {
-    self.myTextField.text = freshText;
-}
-
 #pragma mark - 输入框左视图赋值
 - (void)setImage:(UIImage *)image {
     if (image) {
@@ -108,6 +104,18 @@
     [momView addSubview:imageV];
     self.myTextField.leftView = momView;
     self.myTextField.leftViewMode = UITextFieldViewModeAlways;
+}
+
+- (void)setFreshText:(NSString *)freshText {
+    self.myTextField.text = freshText;
+}
+
+- (void)setTextAlignment:(NSTextAlignment)textAlignment {
+    self.myTextField.textAlignment = textAlignment;
+}
+
+- (void)setPlaceholder:(NSString *)placeholder {
+    self.myTextField.placeholder = placeholder;
 }
 
 - (void)dealloc {
